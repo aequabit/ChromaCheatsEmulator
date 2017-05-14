@@ -1,0 +1,27 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="ChromaCheatsEmulator.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="key" Type="System.String" Scope="User">
+      <Value Profile="(Default)">XvKPGDg58NThZqkxvRezPCgp7uteUJ7T</Value>
+    </Setting>
+    <Setting Name="iv" Type="System.String" Scope="User">
+      <Value Profile="(Default)">ExhefwVupUfpaQeOeVC0OyISWp7VALwn</Value>
+    </Setting>
+    <Setting Name="url" Type="System.String" Scope="User">
+      <Value Profile="(Default)">http://chromacheats.com/chromaauth/auth.php</Value>
+    </Setting>
+    <Setting Name="first" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="url_key" Type="System.String" Scope="User">
+      <Value Profile="(Default)">https://api.cc.aqbt.pw/aes/key</Value>
+    </Setting>
+    <Setting Name="url_iv" Type="System.String" Scope="User">
+      <Value Profile="(Default)">https://api.cc.aqbt.pw/aes/iv</Value>
+    </Setting>
+    <Setting Name="url_url" Type="System.String" Scope="User">
+      <Value Profile="(Default)">https://api.cc.aqbt.pw/api/url</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
