@@ -3,25 +3,31 @@
   <Profiles />
   <Settings>
     <Setting Name="key" Type="System.String" Scope="User">
-      <Value Profile="(Default)">XvKPGDg58NThZqkxvRezPCgp7uteUJ7T</Value>
+      <Value Profile="(Default)">BlcZ496fTZFH42KefU1GsoDOFipI1dQz</Value>
     </Setting>
     <Setting Name="iv" Type="System.String" Scope="User">
-      <Value Profile="(Default)">ExhefwVupUfpaQeOeVC0OyISWp7VALwn</Value>
+      <Value Profile="(Default)">GnzlGN3UlwtjEc19vdrNgd42PGLkxytx</Value>
     </Setting>
     <Setting Name="url" Type="System.String" Scope="User">
-      <Value Profile="(Default)">http://chromacheats.com/chromaauth/auth.php</Value>
+      <Value Profile="(Default)">https://chromacheats.com/auth/auth.php</Value>
     </Setting>
     <Setting Name="first" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">True</Value>
     </Setting>
     <Setting Name="url_key" Type="System.String" Scope="User">
-      <Value Profile="(Default)">https://api.cc.aqbt.pw/aes/key</Value>
+      <Value Profile="(Default)">https://cc.aqbt.pw/aes/key</Value>
     </Setting>
     <Setting Name="url_iv" Type="System.String" Scope="User">
-      <Value Profile="(Default)">https://api.cc.aqbt.pw/aes/iv</Value>
+      <Value Profile="(Default)">https://cc.aqbt.pw/aes/iv</Value>
     </Setting>
     <Setting Name="url_url" Type="System.String" Scope="User">
-      <Value Profile="(Default)">https://api.cc.aqbt.pw/api/url</Value>
+      <Value Profile="(Default)">https://cc.aqbt.pw/api/url</Value>
+    </Setting>
+    <Setting Name="key_base64" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="autosend" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
     </Setting>
   </Settings>
 </SettingsFile>

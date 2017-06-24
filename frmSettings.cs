@@ -23,6 +23,9 @@ namespace ChromaCheatsEmulator
             Properties.Settings.Default.url_key = txtKeyUrl.Text;
             Properties.Settings.Default.url_iv = txtIvUrl.Text;
             Properties.Settings.Default.url_url = txtUrlUrl.Text;
+
+            Properties.Settings.Default.key_base64 = chkBase64.Checked;
+
             Properties.Settings.Default.Save();
 
             this.Close();
@@ -44,6 +47,7 @@ namespace ChromaCheatsEmulator
             if (Properties.Settings.Default.url != null)
                 txtUrl.Text = Properties.Settings.Default.url;
 
+            chkBase64.Checked = Properties.Settings.Default.key_base64;
 
             if (Properties.Settings.Default.url_key != null)
                 txtKeyUrl.Text = Properties.Settings.Default.url_key;
@@ -57,9 +61,10 @@ namespace ChromaCheatsEmulator
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            txtKey.Text = wc.DownloadString("http://api.cc.aqbt.pw/aes/key").Trim();
-            txtIv.Text = wc.DownloadString("http://api.cc.aqbt.pw/aes/iv").Trim();
-            txtUrl.Text = wc.DownloadString("http://api.cc.aqbt.pw/api/url").Trim();
+            chkBase64.Checked = false;
+            txtKey.Text = wc.DownloadString(txtKeyUrl.Text).Trim();
+            txtIv.Text = wc.DownloadString(txtIvUrl.Text).Trim();
+            txtUrl.Text = wc.DownloadString(txtUrlUrl.Text).Trim();
         }
     }
 }

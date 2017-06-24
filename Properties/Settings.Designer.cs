@@ -25,7 +25,7 @@ namespace ChromaCheatsEmulator.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("XvKPGDg58NThZqkxvRezPCgp7uteUJ7T")]
+        [global::System.Configuration.DefaultSettingValueAttribute("BlcZ496fTZFH42KefU1GsoDOFipI1dQz")]
         public string key {
             get {
                 return ((string)(this["key"]));
@@ -37,7 +37,7 @@ namespace ChromaCheatsEmulator.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("ExhefwVupUfpaQeOeVC0OyISWp7VALwn")]
+        [global::System.Configuration.DefaultSettingValueAttribute("GnzlGN3UlwtjEc19vdrNgd42PGLkxytx")]
         public string iv {
             get {
                 return ((string)(this["iv"]));
@@ -49,7 +49,7 @@ namespace ChromaCheatsEmulator.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("http://chromacheats.com/chromaauth/auth.php")]
+        [global::System.Configuration.DefaultSettingValueAttribute("https://chromacheats.com/auth/auth.php")]
         public string url {
             get {
                 return ((string)(this["url"]));
@@ -73,7 +73,7 @@ namespace ChromaCheatsEmulator.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("https://api.cc.aqbt.pw/aes/key")]
+        [global::System.Configuration.DefaultSettingValueAttribute("https://cc.aqbt.pw/aes/key")]
         public string url_key {
             get {
                 return ((string)(this["url_key"]));
@@ -85,7 +85,7 @@ namespace ChromaCheatsEmulator.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("https://api.cc.aqbt.pw/aes/iv")]
+        [global::System.Configuration.DefaultSettingValueAttribute("https://cc.aqbt.pw/aes/iv")]
         public string url_iv {
             get {
                 return ((string)(this["url_iv"]));
@@ -97,13 +97,37 @@ namespace ChromaCheatsEmulator.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("https://api.cc.aqbt.pw/api/url")]
+        [global::System.Configuration.DefaultSettingValueAttribute("https://cc.aqbt.pw/api/url")]
         public string url_url {
             get {
                 return ((string)(this["url_url"]));
             }
             set {
                 this["url_url"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool key_base64 {
+            get {
+                return ((bool)(this["key_base64"]));
+            }
+            set {
+                this["key_base64"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool autosend {
+            get {
+                return ((bool)(this["autosend"]));
+            }
+            set {
+                this["autosend"] = value;
             }
         }
     }

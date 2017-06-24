@@ -44,6 +44,7 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.chkAutosend = new System.Windows.Forms.CheckBox();
             this.grpEncryption.SuspendLayout();
             this.grpNetworking.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -54,12 +55,12 @@
             this.txtPayload.Location = new System.Drawing.Point(14, 22);
             this.txtPayload.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtPayload.Name = "txtPayload";
-            this.txtPayload.Size = new System.Drawing.Size(604, 25);
+            this.txtPayload.Size = new System.Drawing.Size(776, 25);
             this.txtPayload.TabIndex = 0;
             // 
             // btnRequest
             // 
-            this.btnRequest.Location = new System.Drawing.Point(698, 19);
+            this.btnRequest.Location = new System.Drawing.Point(870, 22);
             this.btnRequest.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnRequest.Name = "btnRequest";
             this.btnRequest.Size = new System.Drawing.Size(66, 26);
@@ -75,12 +76,12 @@
             this.txtResponse.Multiline = true;
             this.txtResponse.Name = "txtResponse";
             this.txtResponse.ReadOnly = true;
-            this.txtResponse.Size = new System.Drawing.Size(748, 196);
+            this.txtResponse.Size = new System.Drawing.Size(920, 196);
             this.txtResponse.TabIndex = 2;
             // 
             // btnDecrypt
             // 
-            this.btnDecrypt.Location = new System.Drawing.Point(698, 25);
+            this.btnDecrypt.Location = new System.Drawing.Point(870, 24);
             this.btnDecrypt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnDecrypt.Name = "btnDecrypt";
             this.btnDecrypt.Size = new System.Drawing.Size(66, 26);
@@ -91,7 +92,7 @@
             // 
             // btnEncrypt
             // 
-            this.btnEncrypt.Location = new System.Drawing.Point(624, 25);
+            this.btnEncrypt.Location = new System.Drawing.Point(796, 24);
             this.btnEncrypt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnEncrypt.Name = "btnEncrypt";
             this.btnEncrypt.Size = new System.Drawing.Size(68, 26);
@@ -102,10 +103,10 @@
             // 
             // txtIn
             // 
-            this.txtIn.Location = new System.Drawing.Point(16, 25);
+            this.txtIn.Location = new System.Drawing.Point(14, 25);
             this.txtIn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtIn.Name = "txtIn";
-            this.txtIn.Size = new System.Drawing.Size(602, 25);
+            this.txtIn.Size = new System.Drawing.Size(688, 25);
             this.txtIn.TabIndex = 5;
             // 
             // txtOut
@@ -115,13 +116,13 @@
             this.txtOut.Multiline = true;
             this.txtOut.Name = "txtOut";
             this.txtOut.ReadOnly = true;
-            this.txtOut.Size = new System.Drawing.Size(748, 163);
+            this.txtOut.Size = new System.Drawing.Size(920, 163);
             this.txtOut.TabIndex = 4;
             // 
             // chkDecrypt
             // 
             this.chkDecrypt.AutoSize = true;
-            this.chkDecrypt.Location = new System.Drawing.Point(624, 22);
+            this.chkDecrypt.Location = new System.Drawing.Point(796, 25);
             this.chkDecrypt.Name = "chkDecrypt";
             this.chkDecrypt.Size = new System.Drawing.Size(72, 21);
             this.chkDecrypt.TabIndex = 13;
@@ -131,13 +132,14 @@
             // 
             // grpEncryption
             // 
+            this.grpEncryption.Controls.Add(this.chkAutosend);
             this.grpEncryption.Controls.Add(this.txtIn);
             this.grpEncryption.Controls.Add(this.btnEncrypt);
             this.grpEncryption.Controls.Add(this.btnDecrypt);
             this.grpEncryption.Controls.Add(this.txtOut);
             this.grpEncryption.Location = new System.Drawing.Point(12, 31);
             this.grpEncryption.Name = "grpEncryption";
-            this.grpEncryption.Size = new System.Drawing.Size(780, 236);
+            this.grpEncryption.Size = new System.Drawing.Size(954, 236);
             this.grpEncryption.TabIndex = 15;
             this.grpEncryption.TabStop = false;
             this.grpEncryption.Text = "Encryption";
@@ -150,7 +152,7 @@
             this.grpNetworking.Controls.Add(this.txtResponse);
             this.grpNetworking.Location = new System.Drawing.Point(12, 273);
             this.grpNetworking.Name = "grpNetworking";
-            this.grpNetworking.Size = new System.Drawing.Size(780, 270);
+            this.grpNetworking.Size = new System.Drawing.Size(954, 270);
             this.grpNetworking.TabIndex = 16;
             this.grpNetworking.TabStop = false;
             this.grpNetworking.Text = "Networking";
@@ -162,7 +164,7 @@
             this.aboutToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(806, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(978, 24);
             this.menuStrip1.TabIndex = 17;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -180,11 +182,24 @@
             this.aboutToolStripMenuItem.Text = "About";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
+            // chkAutosend
+            // 
+            this.chkAutosend.AutoSize = true;
+            this.chkAutosend.Location = new System.Drawing.Point(708, 27);
+            this.chkAutosend.Name = "chkAutosend";
+            this.chkAutosend.Size = new System.Drawing.Size(82, 21);
+            this.chkAutosend.TabIndex = 8;
+            this.chkAutosend.Text = "Autosend";
+            this.ttpUpdate.SetToolTip(this.chkAutosend, "Should requests automatically be sent after encrypting them? Also if this is chec" +
+        "ked, %TIME% gets replaced by the current UNIX timestamp.");
+            this.chkAutosend.UseVisualStyleBackColor = true;
+            this.chkAutosend.CheckedChanged += new System.EventHandler(this.chkAutosend_CheckedChanged);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(806, 553);
+            this.ClientSize = new System.Drawing.Size(978, 553);
             this.Controls.Add(this.grpNetworking);
             this.Controls.Add(this.grpEncryption);
             this.Controls.Add(this.menuStrip1);
@@ -225,6 +240,7 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem settingsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
+        private System.Windows.Forms.CheckBox chkAutosend;
     }
 }
 

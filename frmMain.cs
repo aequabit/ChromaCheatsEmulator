@@ -21,13 +21,16 @@ namespace ChromaCheatsEmulator
         {
             try
             {
+                string response;
+
                 /**
                  * Send the payload to the server.
                  */
-                string response = new ChromaFramework.Networking.HttpRequestHandler().Post(
+                response = new ChromaFramework.Networking.HttpRequestHandler().Post(
                     Properties.Settings.Default.url,
                     txtPayload.Text
                 );
+
 
                 /**
                  * If the response can't be decrypted, it's probably a product.
@@ -97,11 +100,24 @@ namespace ChromaCheatsEmulator
         {
             try
             {
-                txtOut.Text = ChromaFramework.Encryption.Rijndael.Encrypt(
-                    txtIn.Text,
-                    Properties.Settings.Default.key,
-                    Properties.Settings.Default.iv
-                );
+                if (chkAutosend.Checked)
+                {
+                    txtOut.Text = ChromaFramework.Encryption.Rijndael.Encrypt(
+                        txtIn.Text.Replace("%TIME%", unix().ToString()),
+                        Properties.Settings.Default.key,
+                        Properties.Settings.Default.iv
+                    );
+                    txtPayload.Text = txtOut.Text;
+                    btnRequest.PerformClick();
+                }
+                else
+                {
+                    txtOut.Text = ChromaFramework.Encryption.Rijndael.Encrypt(
+                        txtIn.Text,
+                        Properties.Settings.Default.key,
+                        Properties.Settings.Default.iv
+                    );
+                }
             }
             catch (Exception ex)
             {
@@ -173,6 +189,8 @@ namespace ChromaCheatsEmulator
                 Properties.Settings.Default.first = false;
                 Properties.Settings.Default.Save();
             }
+
+            chkAutosend.Checked = Properties.Settings.Default.autosend;
         }
 
         private void settingsToolStripMenuItem_Click(object sender, EventArgs e)
@@ -183,6 +201,11 @@ namespace ChromaCheatsEmulator
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
             new frmAbout().ShowDialog();
+        }
+
+        private void chkAutosend_CheckedChanged(object sender, EventArgs e)
+        {
+            Properties.Settings.Default.autosend = chkAutosend.Checked;
         }
     }
 }

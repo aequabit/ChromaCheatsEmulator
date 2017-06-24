@@ -18,8 +18,19 @@ namespace ChromaFramework.Encryption
                 Mode = CipherMode.CBC,
                 Padding = PaddingMode.Zeros
             };
-            byte[] bytes = Encoding.UTF8.GetBytes(str);
-            byte[] numArray = Encoding.UTF8.GetBytes(str1);
+
+            byte[] bytes;
+            if (ChromaCheatsEmulator.Properties.Settings.Default.key_base64)
+                bytes = Convert.FromBase64String(str);
+            else
+                bytes = Encoding.UTF8.GetBytes(str);
+
+            byte[] numArray;
+            if (ChromaCheatsEmulator.Properties.Settings.Default.key_base64)
+                numArray = Convert.FromBase64String(str1);
+            else
+                numArray = Encoding.UTF8.GetBytes(str1);
+
             ICryptoTransform cryptoTransform = rijndaelManaged.CreateDecryptor(bytes, numArray);
             byte[] numArray1 = Convert.FromBase64String(text);
             byte[] numArray2 = new byte[(int)numArray1.Length];
@@ -43,8 +54,19 @@ namespace ChromaFramework.Encryption
                 Mode = CipherMode.CBC,
                 Padding = PaddingMode.Zeros
             };
-            byte[] bytes = Encoding.UTF8.GetBytes(str);
-            byte[] numArray = Encoding.UTF8.GetBytes(str1);
+
+            byte[] bytes;
+            if (ChromaCheatsEmulator.Properties.Settings.Default.key_base64)
+                bytes = Convert.FromBase64String(str);
+            else
+                bytes = Encoding.UTF8.GetBytes(str);
+
+            byte[] numArray;
+            if (ChromaCheatsEmulator.Properties.Settings.Default.key_base64)
+                numArray = Convert.FromBase64String(str1);
+            else
+                numArray = Encoding.UTF8.GetBytes(str1);
+
             ICryptoTransform cryptoTransform = rijndaelManaged.CreateEncryptor(bytes, numArray);
             MemoryStream memoryStream = new MemoryStream();
             CryptoStream cryptoStream = new CryptoStream(memoryStream, cryptoTransform, CryptoStreamMode.Write);
